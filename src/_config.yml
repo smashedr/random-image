@@ -1,0 +1,9 @@
+timezone: America/Los_Angeles
+encoding: utf-8
+
+url: https://smashedr.github.io
+baseurl: /random-image
+
+author: Shane
+
+github_url: https://github.com/smashedr/random-image
