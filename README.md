@@ -2,3 +2,4 @@
 
 # Random Image
 
+- https://smashedr.github.io/random-image/

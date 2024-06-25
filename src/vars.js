@@ -1,4 +1,5 @@
-const photos = [    'photos/1076309_1713645135.jpg',
+const photos = [
+    'photos/1076309_1713645135.jpg',
     'photos/13989_1647028537.jpg',
     'photos/1408990_1715929727.jpg',
     'photos/1608733_1693084765.jpg',

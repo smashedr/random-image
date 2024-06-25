@@ -15,7 +15,7 @@ const file = fs.createWriteStream(varsFile)
 file.on('error', function (err) {
     console.error('err', err)
 })
-file.write(`const ${varName} = [`)
+file.write(`const ${varName} = [\n`)
 files.forEach(function (x) {
     file.write(`    '${relPath}${x}',\n`)
 })
