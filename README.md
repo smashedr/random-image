@@ -2,4 +2,5 @@
 
 # Random Image
 
-- https://smashedr.github.io/random-image/
+- Browser: https://smashedr.github.io/random-image/
+- HTML Tags: https://flask-image.cssnr.com/
