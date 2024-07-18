@@ -12,10 +12,10 @@ for (const dir of dirs) {
     // console.log('images:', images)
     const files = []
     fs.readdirSync(source).forEach((file) => {
-        if (file === 'index.html') {
-            return
+        const imageExtensions = /\.(gif|ico|jpeg|jpg|png|svg|webp)$/i
+        if (file.match(imageExtensions)) {
+            files.push(file)
         }
-        files.push(file)
     })
     // console.log(files)
     const json = JSON.stringify(files, null, 2)

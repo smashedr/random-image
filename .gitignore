@@ -3,3 +3,5 @@
 .vscode/
 **/.jekyll-cache/
 **/_site/
+**/images.js
+**/images.json
