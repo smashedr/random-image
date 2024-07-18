@@ -20,7 +20,7 @@ const swiper = new Swiper('.mySwiper', {
     grabCursor: true,
     loop: true,
     mousewheel: true,
-    slidesPerView: 4,
+    slidesPerView: 5,
     spaceBetween: 10,
     watchSlidesProgress: true,
 })

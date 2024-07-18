@@ -1,10 +1,8 @@
 ---
-layout: default
 permalink: /
 title: Home
 description: Easily extract, parse, or open all links/domains from a site or text with optional filters.
 ---
-
 
 <!doctype html>
 <html lang="en" class="h-100" {% if page.dark %}data-bs-theme="dark"{% endif %}>
@@ -27,7 +25,7 @@ description: Easily extract, parse, or open all links/domains from a site or tex
     <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ "/" | absolute_url }}">
-    <meta property="og:image" content="{{ "/media/logo.png" | absolute_url }}">
+    <meta property="og:image" content="{{ "/logo.png" | absolute_url }}">
 
     {% if page.dark != true %}
         <script type="text/javascript" src="{{ "/theme.js" | relative_url }}"></script>
@@ -43,8 +41,6 @@ description: Easily extract, parse, or open all links/domains from a site or tex
 
 </head>
 <body class="d-flex flex-column h-100">
-
-<div id="tsparticles"></div>
 
 <header>
     <nav class="navbar navbar-expand-sm bg-body-tertiary mb-2" aria-label="Primary Navigation">
