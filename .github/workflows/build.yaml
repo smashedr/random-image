@@ -3,6 +3,8 @@ name: "Pages"
 on:
   push:
     branches: ["master"]
+    paths:
+      - "src/**"
   repository_dispatch:
     types:
       - webhook
@@ -74,7 +76,7 @@ jobs:
 
     steps:
       - name: "Portainer Deploy"
-        uses: cssnr/portainer-stack-deploy-action@redeploy
+        uses: cssnr/portainer-stack-deploy-action@v1
         with:
           token: ${{ secrets.PORTAINER_TOKEN }}
           url: ${{ secrets.PORTAINER_URL }}
@@ -82,4 +84,3 @@ jobs:
           file: docker-compose-swarm.yaml
           repo: https://github.com/smashedr/flask-random-image
           ref: refs/heads/master
-          redeploy: true
