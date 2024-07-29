@@ -75,12 +75,17 @@ jobs:
     needs: deploy
 
     steps:
-      - name: "Portainer Deploy"
-        uses: cssnr/portainer-stack-deploy-action@v1
+      #- name: "Portainer Deploy"
+      #  uses: cssnr/portainer-stack-deploy-action@v1
+      #  with:
+      #    token: ${{ secrets.PORTAINER_TOKEN }}
+      #    url: ${{ secrets.PORTAINER_URL }}
+      #    name: flask-random-image
+      #    file: docker-compose-swarm.yaml
+      #    repo: https://github.com/smashedr/flask-random-image
+      #    ref: refs/heads/master
+
+      - name: "Portainer Re-Deploy"
+        uses: cssnr/web-request-action@master
         with:
-          token: ${{ secrets.PORTAINER_TOKEN }}
-          url: ${{ secrets.PORTAINER_URL }}
-          name: flask-random-image
-          file: docker-compose-swarm.yaml
-          repo: https://github.com/smashedr/flask-random-image
-          ref: refs/heads/master
+          url: ${{ secrets.PORTAINER_HOOK }}
