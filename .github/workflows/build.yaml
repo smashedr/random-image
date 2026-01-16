@@ -27,12 +27,12 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: "Setup Node"
-        uses: actions/setup-node@v4
+      - name: "Setup Node 24"
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       - name: "Generate Files"
         run: |
@@ -47,7 +47,7 @@ jobs:
           source: "./src"
 
       - name: "Upload Pages Artifact"
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site/
 
@@ -65,8 +65,6 @@ jobs:
       - name: "Deploy Pages"
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
 
   stack:
     name: "Update Stack"
